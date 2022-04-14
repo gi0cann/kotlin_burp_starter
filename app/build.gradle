@@ -16,6 +16,12 @@ dependencies {
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
 }
 
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = 11
+    }
+}
+
 application {
     mainClass = 'burp.BurpExtender'
 }

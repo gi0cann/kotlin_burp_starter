@@ -4,10 +4,10 @@ import java.io.PrintWriter
 @Suppress("unused")
 class BurpExtender : IBurpExtender {
     override fun registerExtenderCallbacks(callbacks: IBurpExtenderCallbacks?) {
-        val stdout = PrintWriter(callbacks?.stdout ?: null, true)
-        val stderr = PrintWriter(callbacks?.stderr ?: null, true)
+        val stdout = PrintWriter(callbacks?.stdout, true)
+        val stderr = PrintWriter(callbacks?.stderr, true)
 
-        callbacks?.setExtensionName("My Addon")
+        callbacks?.setExtensionName("Kotlin Extension starter")
         stdout.println("Hello World!")
         stderr.println("Hello World!")
     }
